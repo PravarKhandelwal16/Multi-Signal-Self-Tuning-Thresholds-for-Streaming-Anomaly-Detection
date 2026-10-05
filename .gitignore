@@ -1,0 +1,44 @@
+# ── Datasets (too large for Git, derived & reproducible via scripts) ───────────
+Raw Dataset/
+Processed DataSet/
+MachineLearningCVE/
+processed/
+*.parquet
+*.pcap
+*.pcap_ISCX.csv
+
+# ── Python cache & artifacts ──────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ── Virtual environments ──────────────────────────────────────────────────────
+.venv/
+venv/
+env/
+ENV/
+
+# ── Jupyter notebooks ─────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+
+# ── OS & IDE files ────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# ── Large serialized models / outputs ─────────────────────────────────────────
+*.pkl
+*.pickle
+*.feather
+*.h5
+*.hdf5
+
+# ── Logs ──────────────────────────────────────────────────────────────────────
+*.log

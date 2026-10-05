@@ -1,0 +1,185 @@
+{
+  "timestamp": "2026-10-05T10:36:28.856053",
+  "step": "Step 2 — Data Cleaning",
+  "totals": {
+    "original_rows": 2830743,
+    "removed_zero_duration_rows": 2867,
+    "removed_extra_nan_inf_rows": 0,
+    "removed_duplicate_rows": 255236,
+    "total_removed": 258103,
+    "final_rows": 2572640,
+    "pct_removed": 9.118,
+    "remaining_nan": 0,
+    "remaining_pos_inf": 0,
+    "remaining_neg_inf": 0,
+    "remaining_duplicates": 0
+  },
+  "per_file": [
+    {
+      "file": "Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv",
+      "original_rows": 225745,
+      "removed_zero_duration": 34,
+      "removed_extra_nan_inf": 0,
+      "removed_duplicates": 2629,
+      "total_removed": 2663,
+      "final_rows": 223082,
+      "pct_removed": 1.18,
+      "final_nan": 0,
+      "final_pos_inf": 0,
+      "final_neg_inf": 0,
+      "final_duplicates": 0,
+      "label_distribution_after": {
+        "DDoS": 128014,
+        "BENIGN": 95068
+      },
+      "unicode_label_fix_applied": false,
+      "output_file": "C:\\Work\\Big data\\processed\\cleaned_Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv"
+    },
+    {
+      "file": "Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv",
+      "original_rows": 286467,
+      "removed_zero_duration": 371,
+      "removed_extra_nan_inf": 0,
+      "removed_duplicates": 72319,
+      "total_removed": 72690,
+      "final_rows": 213777,
+      "pct_removed": 25.375,
+      "final_nan": 0,
+      "final_pos_inf": 0,
+      "final_neg_inf": 0,
+      "final_duplicates": 0,
+      "label_distribution_after": {
+        "BENIGN": 123083,
+        "PortScan": 90694
+      },
+      "unicode_label_fix_applied": false,
+      "output_file": "C:\\Work\\Big data\\processed\\cleaned_Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv"
+    },
+    {
+      "file": "Friday-WorkingHours-Morning.pcap_ISCX.csv",
+      "original_rows": 191033,
+      "removed_zero_duration": 122,
+      "removed_extra_nan_inf": 0,
+      "removed_duplicates": 6867,
+      "total_removed": 6989,
+      "final_rows": 184044,
+      "pct_removed": 3.659,
+      "final_nan": 0,
+      "final_pos_inf": 0,
+      "final_neg_inf": 0,
+      "final_duplicates": 0,
+      "label_distribution_after": {
+        "BENIGN": 182096,
+        "Bot": 1948
+      },
+      "unicode_label_fix_applied": false,
+      "output_file": "C:\\Work\\Big data\\processed\\cleaned_Friday-WorkingHours-Morning.pcap_ISCX.csv"
+    },
+    {
+      "file": "Monday-WorkingHours.pcap_ISCX.csv",
+      "original_rows": 529918,
+      "removed_zero_duration": 437,
+      "removed_extra_nan_inf": 0,
+      "removed_duplicates": 26831,
+      "total_removed": 27268,
+      "final_rows": 502650,
+      "pct_removed": 5.146,
+      "final_nan": 0,
+      "final_pos_inf": 0,
+      "final_neg_inf": 0,
+      "final_duplicates": 0,
+      "label_distribution_after": {
+        "BENIGN": 502650
+      },
+      "unicode_label_fix_applied": false,
+      "output_file": "C:\\Work\\Big data\\processed\\cleaned_Monday-WorkingHours.pcap_ISCX.csv"
+    },
+    {
+      "file": "Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv",
+      "original_rows": 288602,
+      "removed_zero_duration": 207,
+      "removed_extra_nan_inf": 0,
+      "removed_duplicates": 35605,
+      "total_removed": 35812,
+      "final_rows": 252790,
+      "pct_removed": 12.409,
+      "final_nan": 0,
+      "final_pos_inf": 0,
+      "final_neg_inf": 0,
+      "final_duplicates": 0,
+      "label_distribution_after": {
+        "BENIGN": 252754,
+        "Infiltration": 36
+      },
+      "unicode_label_fix_applied": false,
+      "output_file": "C:\\Work\\Big data\\processed\\cleaned_Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv"
+    },
+    {
+      "file": "Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv",
+      "original_rows": 170366,
+      "removed_zero_duration": 135,
+      "removed_extra_nan_inf": 0,
+      "removed_duplicates": 6052,
+      "total_removed": 6187,
+      "final_rows": 164179,
+      "pct_removed": 3.632,
+      "final_nan": 0,
+      "final_pos_inf": 0,
+      "final_neg_inf": 0,
+      "final_duplicates": 0,
+      "label_distribution_after": {
+        "BENIGN": 162036,
+        "Web Attack – Brute Force": 1470,
+        "Web Attack – XSS": 652,
+        "Web Attack – Sql Injection": 21
+      },
+      "unicode_label_fix_applied": true,
+      "output_file": "C:\\Work\\Big data\\processed\\cleaned_Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv"
+    },
+    {
+      "file": "Tuesday-WorkingHours.pcap_ISCX.csv",
+      "original_rows": 445909,
+      "removed_zero_duration": 264,
+      "removed_extra_nan_inf": 0,
+      "removed_duplicates": 24019,
+      "total_removed": 24283,
+      "final_rows": 421626,
+      "pct_removed": 5.446,
+      "final_nan": 0,
+      "final_pos_inf": 0,
+      "final_neg_inf": 0,
+      "final_duplicates": 0,
+      "label_distribution_after": {
+        "BENIGN": 412476,
+        "FTP-Patator": 5931,
+        "SSH-Patator": 3219
+      },
+      "unicode_label_fix_applied": false,
+      "output_file": "C:\\Work\\Big data\\processed\\cleaned_Tuesday-WorkingHours.pcap_ISCX.csv"
+    },
+    {
+      "file": "Wednesday-workingHours.pcap_ISCX.csv",
+      "original_rows": 692703,
+      "removed_zero_duration": 1297,
+      "removed_extra_nan_inf": 0,
+      "removed_duplicates": 80914,
+      "total_removed": 82211,
+      "final_rows": 610492,
+      "pct_removed": 11.868,
+      "final_nan": 0,
+      "final_pos_inf": 0,
+      "final_neg_inf": 0,
+      "final_duplicates": 0,
+      "label_distribution_after": {
+        "BENIGN": 416736,
+        "DoS Hulk": 172846,
+        "DoS GoldenEye": 10286,
+        "DoS slowloris": 5385,
+        "DoS Slowhttptest": 5228,
+        "Heartbleed": 11
+      },
+      "unicode_label_fix_applied": false,
+      "output_file": "C:\\Work\\Big data\\processed\\cleaned_Wednesday-workingHours.pcap_ISCX.csv"
+    }
+  ]
+}

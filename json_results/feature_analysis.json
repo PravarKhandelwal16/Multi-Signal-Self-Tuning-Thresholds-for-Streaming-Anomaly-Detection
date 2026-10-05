@@ -1,0 +1,3016 @@
+{
+  "generated_at": "2026-10-05T10:57:05.958510",
+  "step": "Feature Analysis (Cleaned Dataset)",
+  "dataset_path": "C:\\Work\\Big data\\Processed DataSet",
+  "total_files": 8,
+  "total_rows": 2572640,
+  "sample_size": 240000,
+  "total_columns": 79,
+  "feature_count": 78,
+  "file_summaries": [
+    {
+      "file": "cleaned_Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv",
+      "rows": 223082,
+      "labels": {
+        "DDoS": 128014,
+        "BENIGN": 95068
+      }
+    },
+    {
+      "file": "cleaned_Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv",
+      "rows": 213777,
+      "labels": {
+        "BENIGN": 123083,
+        "PortScan": 90694
+      }
+    },
+    {
+      "file": "cleaned_Friday-WorkingHours-Morning.pcap_ISCX.csv",
+      "rows": 184044,
+      "labels": {
+        "BENIGN": 182096,
+        "Bot": 1948
+      }
+    },
+    {
+      "file": "cleaned_Monday-WorkingHours.pcap_ISCX.csv",
+      "rows": 502650,
+      "labels": {
+        "BENIGN": 502650
+      }
+    },
+    {
+      "file": "cleaned_Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv",
+      "rows": 252790,
+      "labels": {
+        "BENIGN": 252754,
+        "Infiltration": 36
+      }
+    },
+    {
+      "file": "cleaned_Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv",
+      "rows": 164179,
+      "labels": {
+        "BENIGN": 162036,
+        "Web Attack – Brute Force": 1470,
+        "Web Attack – XSS": 652,
+        "Web Attack – Sql Injection": 21
+      }
+    },
+    {
+      "file": "cleaned_Tuesday-WorkingHours.pcap_ISCX.csv",
+      "rows": 421626,
+      "labels": {
+        "BENIGN": 412476,
+        "FTP-Patator": 5931,
+        "SSH-Patator": 3219
+      }
+    },
+    {
+      "file": "cleaned_Wednesday-workingHours.pcap_ISCX.csv",
+      "rows": 610492,
+      "labels": {
+        "BENIGN": 416736,
+        "DoS Hulk": 172846,
+        "DoS GoldenEye": 10286,
+        "DoS slowloris": 5385,
+        "DoS Slowhttptest": 5228,
+        "Heartbleed": 11
+      }
+    }
+  ],
+  "categories": {
+    "Timestamp": [
+      "Timestamp (Omitted in MachineLearningCVE CSV export; present in raw pcap/flow logs)"
+    ],
+    "Identifier fields": [
+      "Flow ID (Omitted in MachineLearningCVE CSV export)",
+      "Source IP (Omitted in MachineLearningCVE CSV export)",
+      "Destination IP (Omitted in MachineLearningCVE CSV export)",
+      "Source Port (Omitted in MachineLearningCVE CSV export)"
+    ],
+    "Network address fields": [
+      "Source IP (Omitted)",
+      "Destination IP (Omitted)"
+    ],
+    "Port fields": [
+      "Destination Port"
+    ],
+    "Numerical traffic features": [
+      "Flow Duration",
+      "Total Fwd Packets",
+      "Total Backward Packets",
+      "Total Length of Fwd Packets",
+      "Total Length of Bwd Packets",
+      "Fwd Packet Length Max",
+      "Fwd Packet Length Min",
+      "Fwd Packet Length Mean",
+      "Fwd Packet Length Std",
+      "Bwd Packet Length Max",
+      "Bwd Packet Length Min",
+      "Bwd Packet Length Mean",
+      "Bwd Packet Length Std",
+      "Flow Bytes/s",
+      "Flow Packets/s",
+      "Flow IAT Mean",
+      "Flow IAT Std",
+      "Flow IAT Max",
+      "Flow IAT Min",
+      "Fwd IAT Total",
+      "Fwd IAT Mean",
+      "Fwd IAT Std",
+      "Fwd IAT Max",
+      "Fwd IAT Min",
+      "Bwd IAT Total",
+      "Bwd IAT Mean",
+      "Bwd IAT Std",
+      "Bwd IAT Max",
+      "Bwd IAT Min",
+      "Fwd PSH Flags",
+      "Bwd PSH Flags",
+      "Fwd URG Flags",
+      "Bwd URG Flags",
+      "Fwd Header Length",
+      "Bwd Header Length",
+      "Fwd Packets/s",
+      "Bwd Packets/s",
+      "Min Packet Length",
+      "Max Packet Length",
+      "Packet Length Mean",
+      "Packet Length Std",
+      "Packet Length Variance",
+      "FIN Flag Count",
+      "SYN Flag Count",
+      "RST Flag Count",
+      "PSH Flag Count",
+      "ACK Flag Count",
+      "URG Flag Count",
+      "CWE Flag Count",
+      "ECE Flag Count",
+      "Down/Up Ratio",
+      "Average Packet Size",
+      "Avg Fwd Segment Size",
+      "Avg Bwd Segment Size",
+      "Fwd Header Length.1",
+      "Fwd Avg Bytes/Bulk",
+      "Fwd Avg Packets/Bulk",
+      "Fwd Avg Bulk Rate",
+      "Bwd Avg Bytes/Bulk",
+      "Bwd Avg Packets/Bulk",
+      "Bwd Avg Bulk Rate",
+      "Subflow Fwd Packets",
+      "Subflow Fwd Bytes",
+      "Subflow Bwd Packets",
+      "Subflow Bwd Bytes",
+      "Init_Win_bytes_forward",
+      "Init_Win_bytes_backward",
+      "act_data_pkt_fwd",
+      "min_seg_size_forward",
+      "Active Mean",
+      "Active Std",
+      "Active Max",
+      "Active Min",
+      "Idle Mean",
+      "Idle Std",
+      "Idle Max",
+      "Idle Min"
+    ],
+    "Label / target columns": [
+      "Label"
+    ],
+    "Potential duplicate/redundant features": [
+      "Fwd Header Length.1",
+      "Subflow Fwd Packets",
+      "Subflow Fwd Bytes",
+      "Subflow Bwd Packets",
+      "Subflow Bwd Bytes",
+      "Avg Fwd Segment Size",
+      "Avg Bwd Segment Size",
+      "Packet Length Variance"
+    ]
+  },
+  "constant_features": [
+    "Bwd PSH Flags",
+    "Bwd URG Flags",
+    "Fwd Avg Bytes/Bulk",
+    "Fwd Avg Packets/Bulk",
+    "Fwd Avg Bulk Rate",
+    "Bwd Avg Bytes/Bulk",
+    "Bwd Avg Packets/Bulk",
+    "Bwd Avg Bulk Rate"
+  ],
+  "near_zero_variance_features": [
+    "Fwd URG Flags",
+    "RST Flag Count",
+    "CWE Flag Count",
+    "ECE Flag Count"
+  ],
+  "features_with_negatives": [
+    {
+      "feature": "Flow Duration",
+      "count": 113,
+      "min": -13.0
+    },
+    {
+      "feature": "Flow Bytes/s",
+      "count": 84,
+      "min": -261000000.0
+    },
+    {
+      "feature": "Flow Packets/s",
+      "count": 113,
+      "min": -2000000.0
+    },
+    {
+      "feature": "Flow IAT Mean",
+      "count": 113,
+      "min": -13.0
+    },
+    {
+      "feature": "Flow IAT Max",
+      "count": 113,
+      "min": -13.0
+    },
+    {
+      "feature": "Flow IAT Min",
+      "count": 2887,
+      "min": -14.0
+    },
+    {
+      "feature": "Fwd IAT Min",
+      "count": 17,
+      "min": -12.0
+    },
+    {
+      "feature": "Fwd Header Length",
+      "count": 35,
+      "min": -32212234632.0
+    },
+    {
+      "feature": "Bwd Header Length",
+      "count": 22,
+      "min": -1073741320.0
+    },
+    {
+      "feature": "Fwd Header Length.1",
+      "count": 35,
+      "min": -32212234632.0
+    },
+    {
+      "feature": "Init_Win_bytes_forward",
+      "count": 951492,
+      "min": -1.0
+    },
+    {
+      "feature": "Init_Win_bytes_backward",
+      "count": 1264134,
+      "min": -1.0
+    },
+    {
+      "feature": "min_seg_size_forward",
+      "count": 35,
+      "min": -536870661.0
+    }
+  ],
+  "suspicious_features": [
+    {
+      "feature": "Flow Duration",
+      "notes": [
+        "Negative values present (113 occurrences, min=-13.0)"
+      ]
+    },
+    {
+      "feature": "Total Fwd Packets",
+      "notes": [
+        "Severe outlier skew (max is >1000x the 99th percentile)"
+      ]
+    },
+    {
+      "feature": "Total Backward Packets",
+      "notes": [
+        "Severe outlier skew (max is >1000x the 99th percentile)"
+      ]
+    },
+    {
+      "feature": "Total Length of Fwd Packets",
+      "notes": [
+        "Severe outlier skew (max is >1000x the 99th percentile)"
+      ]
+    },
+    {
+      "feature": "Total Length of Bwd Packets",
+      "notes": [
+        "Severe outlier skew (max is >1000x the 99th percentile)"
+      ]
+    },
+    {
+      "feature": "Flow Bytes/s",
+      "notes": [
+        "Negative values present (84 occurrences, min=-261000000.0)"
+      ]
+    },
+    {
+      "feature": "Flow Packets/s",
+      "notes": [
+        "Negative values present (113 occurrences, min=-2000000.0)"
+      ]
+    },
+    {
+      "feature": "Flow IAT Mean",
+      "notes": [
+        "Negative values present (113 occurrences, min=-13.0)"
+      ]
+    },
+    {
+      "feature": "Flow IAT Max",
+      "notes": [
+        "Negative values present (113 occurrences, min=-13.0)"
+      ]
+    },
+    {
+      "feature": "Flow IAT Min",
+      "notes": [
+        "Negative values present (2,887 occurrences, min=-14.0)"
+      ]
+    },
+    {
+      "feature": "Fwd IAT Min",
+      "notes": [
+        "Negative values present (17 occurrences, min=-12.0)"
+      ]
+    },
+    {
+      "feature": "Bwd PSH Flags",
+      "notes": [
+        "Constant feature (zero variance across all 2.57M flows)",
+        "Extremely sparse (100.00% zeros)"
+      ]
+    },
+    {
+      "feature": "Fwd URG Flags",
+      "notes": [
+        "Extremely sparse (100.00% zeros)"
+      ]
+    },
+    {
+      "feature": "Bwd URG Flags",
+      "notes": [
+        "Constant feature (zero variance across all 2.57M flows)",
+        "Extremely sparse (100.00% zeros)"
+      ]
+    },
+    {
+      "feature": "Fwd Header Length",
+      "notes": [
+        "Negative values present (35 occurrences, min=-32212234632.0)",
+        "Severe outlier skew (max is >1000x the 99th percentile)"
+      ]
+    },
+    {
+      "feature": "Bwd Header Length",
+      "notes": [
+        "Negative values present (22 occurrences, min=-1073741320.0)",
+        "Severe outlier skew (max is >1000x the 99th percentile)"
+      ]
+    },
+    {
+      "feature": "RST Flag Count",
+      "notes": [
+        "Extremely sparse (99.97% zeros)"
+      ]
+    },
+    {
+      "feature": "CWE Flag Count",
+      "notes": [
+        "Extremely sparse (100.00% zeros)"
+      ]
+    },
+    {
+      "feature": "ECE Flag Count",
+      "notes": [
+        "Extremely sparse (99.97% zeros)"
+      ]
+    },
+    {
+      "feature": "Fwd Header Length.1",
+      "notes": [
+        "Negative values present (35 occurrences, min=-32212234632.0)",
+        "Severe outlier skew (max is >1000x the 99th percentile)"
+      ]
+    },
+    {
+      "feature": "Fwd Avg Bytes/Bulk",
+      "notes": [
+        "Constant feature (zero variance across all 2.57M flows)",
+        "Extremely sparse (100.00% zeros)"
+      ]
+    },
+    {
+      "feature": "Fwd Avg Packets/Bulk",
+      "notes": [
+        "Constant feature (zero variance across all 2.57M flows)",
+        "Extremely sparse (100.00% zeros)"
+      ]
+    },
+    {
+      "feature": "Fwd Avg Bulk Rate",
+      "notes": [
+        "Constant feature (zero variance across all 2.57M flows)",
+        "Extremely sparse (100.00% zeros)"
+      ]
+    },
+    {
+      "feature": "Bwd Avg Bytes/Bulk",
+      "notes": [
+        "Constant feature (zero variance across all 2.57M flows)",
+        "Extremely sparse (100.00% zeros)"
+      ]
+    },
+    {
+      "feature": "Bwd Avg Packets/Bulk",
+      "notes": [
+        "Constant feature (zero variance across all 2.57M flows)",
+        "Extremely sparse (100.00% zeros)"
+      ]
+    },
+    {
+      "feature": "Bwd Avg Bulk Rate",
+      "notes": [
+        "Constant feature (zero variance across all 2.57M flows)",
+        "Extremely sparse (100.00% zeros)"
+      ]
+    },
+    {
+      "feature": "Subflow Fwd Packets",
+      "notes": [
+        "Severe outlier skew (max is >1000x the 99th percentile)"
+      ]
+    },
+    {
+      "feature": "Subflow Fwd Bytes",
+      "notes": [
+        "Severe outlier skew (max is >1000x the 99th percentile)"
+      ]
+    },
+    {
+      "feature": "Subflow Bwd Packets",
+      "notes": [
+        "Severe outlier skew (max is >1000x the 99th percentile)"
+      ]
+    },
+    {
+      "feature": "Subflow Bwd Bytes",
+      "notes": [
+        "Severe outlier skew (max is >1000x the 99th percentile)"
+      ]
+    },
+    {
+      "feature": "Init_Win_bytes_forward",
+      "notes": [
+        "Negative values present (951,492 occurrences, min=-1.0)"
+      ]
+    },
+    {
+      "feature": "Init_Win_bytes_backward",
+      "notes": [
+        "Negative values present (1,264,134 occurrences, min=-1.0)"
+      ]
+    },
+    {
+      "feature": "act_data_pkt_fwd",
+      "notes": [
+        "Severe outlier skew (max is >1000x the 99th percentile)"
+      ]
+    },
+    {
+      "feature": "min_seg_size_forward",
+      "notes": [
+        "Negative values present (35 occurrences, min=-536870661.0)"
+      ]
+    }
+  ],
+  "identical_pairs_verification": {
+    "Fwd Header Length == Fwd Header Length.1": true,
+    "Total Fwd Packets == Subflow Fwd Packets": true,
+    "Total Backward Packets == Subflow Bwd Packets": true,
+    "Total Length of Fwd Packets == Subflow Fwd Bytes": false,
+    "Total Length of Bwd Packets == Subflow Bwd Bytes": false,
+    "Fwd Packet Length Mean == Avg Fwd Segment Size": true,
+    "Bwd Packet Length Mean == Avg Bwd Segment Size": true
+  },
+  "high_correlation_pairs_count": 68,
+  "high_correlation_pairs_top50": [
+    {
+      "feature_1": "Total Fwd Packets",
+      "feature_2": "Subflow Fwd Packets",
+      "correlation": 1.0,
+      "abs_corr": 1.0
+    },
+    {
+      "feature_1": "Total Backward Packets",
+      "feature_2": "Subflow Bwd Packets",
+      "correlation": 1.0,
+      "abs_corr": 1.0
+    },
+    {
+      "feature_1": "Total Length of Fwd Packets",
+      "feature_2": "Subflow Fwd Bytes",
+      "correlation": 1.0,
+      "abs_corr": 1.0
+    },
+    {
+      "feature_1": "Total Length of Bwd Packets",
+      "feature_2": "Subflow Bwd Bytes",
+      "correlation": 1.0,
+      "abs_corr": 1.0
+    },
+    {
+      "feature_1": "Fwd Packet Length Mean",
+      "feature_2": "Avg Fwd Segment Size",
+      "correlation": 1.0,
+      "abs_corr": 1.0
+    },
+    {
+      "feature_1": "Bwd Packet Length Mean",
+      "feature_2": "Avg Bwd Segment Size",
+      "correlation": 1.0,
+      "abs_corr": 1.0
+    },
+    {
+      "feature_1": "Fwd PSH Flags",
+      "feature_2": "SYN Flag Count",
+      "correlation": 1.0,
+      "abs_corr": 1.0
+    },
+    {
+      "feature_1": "Fwd URG Flags",
+      "feature_2": "CWE Flag Count",
+      "correlation": 1.0,
+      "abs_corr": 1.0
+    },
+    {
+      "feature_1": "Fwd Header Length",
+      "feature_2": "Fwd Header Length.1",
+      "correlation": 1.0,
+      "abs_corr": 1.0
+    },
+    {
+      "feature_1": "RST Flag Count",
+      "feature_2": "ECE Flag Count",
+      "correlation": 1.0,
+      "abs_corr": 1.0
+    },
+    {
+      "feature_1": "Total Fwd Packets",
+      "feature_2": "Total Length of Bwd Packets",
+      "correlation": 0.9997,
+      "abs_corr": 0.9997
+    },
+    {
+      "feature_1": "Total Fwd Packets",
+      "feature_2": "Subflow Bwd Bytes",
+      "correlation": 0.9997,
+      "abs_corr": 0.9997
+    },
+    {
+      "feature_1": "Total Length of Bwd Packets",
+      "feature_2": "Subflow Fwd Packets",
+      "correlation": 0.9997,
+      "abs_corr": 0.9997
+    },
+    {
+      "feature_1": "Subflow Fwd Packets",
+      "feature_2": "Subflow Bwd Bytes",
+      "correlation": 0.9997,
+      "abs_corr": 0.9997
+    },
+    {
+      "feature_1": "Total Fwd Packets",
+      "feature_2": "Total Backward Packets",
+      "correlation": 0.9995,
+      "abs_corr": 0.9995
+    },
+    {
+      "feature_1": "Total Fwd Packets",
+      "feature_2": "Subflow Bwd Packets",
+      "correlation": 0.9995,
+      "abs_corr": 0.9995
+    },
+    {
+      "feature_1": "Total Backward Packets",
+      "feature_2": "Subflow Fwd Packets",
+      "correlation": 0.9995,
+      "abs_corr": 0.9995
+    },
+    {
+      "feature_1": "Subflow Fwd Packets",
+      "feature_2": "Subflow Bwd Packets",
+      "correlation": 0.9995,
+      "abs_corr": 0.9995
+    },
+    {
+      "feature_1": "Total Backward Packets",
+      "feature_2": "Total Length of Bwd Packets",
+      "correlation": 0.9993,
+      "abs_corr": 0.9993
+    },
+    {
+      "feature_1": "Total Backward Packets",
+      "feature_2": "Subflow Bwd Bytes",
+      "correlation": 0.9993,
+      "abs_corr": 0.9993
+    },
+    {
+      "feature_1": "Total Length of Bwd Packets",
+      "feature_2": "Subflow Bwd Packets",
+      "correlation": 0.9993,
+      "abs_corr": 0.9993
+    },
+    {
+      "feature_1": "Subflow Bwd Packets",
+      "feature_2": "Subflow Bwd Bytes",
+      "correlation": 0.9993,
+      "abs_corr": 0.9993
+    },
+    {
+      "feature_1": "Flow Duration",
+      "feature_2": "Fwd IAT Total",
+      "correlation": 0.9982,
+      "abs_corr": 0.9982
+    },
+    {
+      "feature_1": "Packet Length Mean",
+      "feature_2": "Average Packet Size",
+      "correlation": 0.9978,
+      "abs_corr": 0.9978
+    },
+    {
+      "feature_1": "Flow IAT Max",
+      "feature_2": "Fwd IAT Max",
+      "correlation": 0.997,
+      "abs_corr": 0.997
+    },
+    {
+      "feature_1": "Flow IAT Max",
+      "feature_2": "Idle Max",
+      "correlation": 0.9863,
+      "abs_corr": 0.9863
+    },
+    {
+      "feature_1": "Fwd IAT Max",
+      "feature_2": "Idle Max",
+      "correlation": 0.9851,
+      "abs_corr": 0.9851
+    },
+    {
+      "feature_1": "Idle Mean",
+      "feature_2": "Idle Max",
+      "correlation": 0.9851,
+      "abs_corr": 0.9851
+    },
+    {
+      "feature_1": "Max Packet Length",
+      "feature_2": "Packet Length Std",
+      "correlation": 0.9834,
+      "abs_corr": 0.9834
+    },
+    {
+      "feature_1": "Idle Mean",
+      "feature_2": "Idle Min",
+      "correlation": 0.9834,
+      "abs_corr": 0.9834
+    },
+    {
+      "feature_1": "Bwd Packet Length Max",
+      "feature_2": "Bwd Packet Length Std",
+      "correlation": 0.9826,
+      "abs_corr": 0.9826
+    },
+    {
+      "feature_1": "Flow Packets/s",
+      "feature_2": "Fwd Packets/s",
+      "correlation": 0.9772,
+      "abs_corr": 0.9772
+    },
+    {
+      "feature_1": "Fwd Packet Length Max",
+      "feature_2": "Fwd Packet Length Std",
+      "correlation": 0.9718,
+      "abs_corr": 0.9718
+    },
+    {
+      "feature_1": "Flow IAT Max",
+      "feature_2": "Idle Mean",
+      "correlation": 0.9715,
+      "abs_corr": 0.9715
+    },
+    {
+      "feature_1": "Fwd IAT Max",
+      "feature_2": "Idle Mean",
+      "correlation": 0.9689,
+      "abs_corr": 0.9689
+    },
+    {
+      "feature_1": "Bwd Packet Length Max",
+      "feature_2": "Bwd Packet Length Mean",
+      "correlation": 0.9581,
+      "abs_corr": 0.9581
+    },
+    {
+      "feature_1": "Bwd Packet Length Max",
+      "feature_2": "Avg Bwd Segment Size",
+      "correlation": 0.9581,
+      "abs_corr": 0.9581
+    },
+    {
+      "feature_1": "Bwd IAT Mean",
+      "feature_2": "Bwd IAT Min",
+      "correlation": 0.9474,
+      "abs_corr": 0.9474
+    },
+    {
+      "feature_1": "Packet Length Std",
+      "feature_2": "Average Packet Size",
+      "correlation": 0.9436,
+      "abs_corr": 0.9436
+    },
+    {
+      "feature_1": "Packet Length Mean",
+      "feature_2": "Packet Length Std",
+      "correlation": 0.9425,
+      "abs_corr": 0.9425
+    },
+    {
+      "feature_1": "Bwd Packet Length Mean",
+      "feature_2": "Bwd Packet Length Std",
+      "correlation": 0.9395,
+      "abs_corr": 0.9395
+    },
+    {
+      "feature_1": "Bwd Packet Length Std",
+      "feature_2": "Avg Bwd Segment Size",
+      "correlation": 0.9395,
+      "abs_corr": 0.9395
+    },
+    {
+      "feature_1": "Idle Max",
+      "feature_2": "Idle Min",
+      "correlation": 0.9378,
+      "abs_corr": 0.9378
+    },
+    {
+      "feature_1": "Bwd Packet Length Max",
+      "feature_2": "Max Packet Length",
+      "correlation": 0.9319,
+      "abs_corr": 0.9319
+    },
+    {
+      "feature_1": "Bwd Packet Length Std",
+      "feature_2": "Packet Length Std",
+      "correlation": 0.9296,
+      "abs_corr": 0.9296
+    },
+    {
+      "feature_1": "Packet Length Std",
+      "feature_2": "Packet Length Variance",
+      "correlation": 0.9283,
+      "abs_corr": 0.9283
+    },
+    {
+      "feature_1": "Flow IAT Std",
+      "feature_2": "Flow IAT Max",
+      "correlation": 0.9272,
+      "abs_corr": 0.9272
+    },
+    {
+      "feature_1": "Bwd Packet Length Max",
+      "feature_2": "Packet Length Std",
+      "correlation": 0.9261,
+      "abs_corr": 0.9261
+    },
+    {
+      "feature_1": "Flow IAT Max",
+      "feature_2": "Idle Min",
+      "correlation": 0.925,
+      "abs_corr": 0.925
+    },
+    {
+      "feature_1": "Flow IAT Std",
+      "feature_2": "Fwd IAT Max",
+      "correlation": 0.9241,
+      "abs_corr": 0.9241
+    }
+  ],
+  "multi_signal_groups": {
+    "Volume & Size Signals": 20,
+    "Rate & Velocity Signals": 4,
+    "Temporal & Inter-Arrival Time (IAT) Signals": 15,
+    "TCP Protocol State & Flag Signals": 18,
+    "Activity & Silence Signals": 8,
+    "Bulk & Subflow Signals": 12,
+    "Network Endpoint & Identifiers": 1,
+    "Target Label": 1
+  },
+  "recommendation_summary": {
+    "Keep": 36,
+    "Transform": 24,
+    "Drop": 18,
+    "Discuss": 1
+  },
+  "feature_statistics": {
+    "Destination Port": {
+      "dtype": "int64",
+      "min": 0.0,
+      "max": 65535.0,
+      "mean": 8522.896844,
+      "median": 80.0,
+      "std": 18863.450823,
+      "p01": 53.0,
+      "p99": 61612.01,
+      "zeros_count": 1589,
+      "zeros_pct": 0.062,
+      "negatives_count": 0,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 23262,
+      "is_constant": false,
+      "is_near_zero_variance": false,
+      "suspicion_notes": []
+    },
+    "Flow Duration": {
+      "dtype": "int64",
+      "min": -13.0,
+      "max": 119999998.0,
+      "mean": 16257359.765012,
+      "median": 47528.0,
+      "std": 34953760.769575,
+      "p01": 3.0,
+      "p99": 117862813.22,
+      "zeros_count": 0,
+      "zeros_pct": 0.0,
+      "negatives_count": 113,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 126311,
+      "is_constant": false,
+      "is_near_zero_variance": false,
+      "suspicion_notes": [
+        "Negative values present (113 occurrences, min=-13.0)"
+      ]
+    },
+    "Total Fwd Packets": {
+      "dtype": "int64",
+      "min": 1.0,
+      "max": 219759.0,
+      "mean": 10.116043,
+      "median": 2.0,
+      "std": 786.37593,
+      "p01": 1.0,
+      "p99": 51.0,
+      "zeros_count": 0,
+      "zeros_pct": 0.0,
+      "negatives_count": 0,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 485,
+      "is_constant": false,
+      "is_near_zero_variance": false,
+      "suspicion_notes": [
+        "Severe outlier skew (max is >1000x the 99th percentile)"
+      ]
+    },
+    "Total Backward Packets": {
+      "dtype": "int64",
+      "min": 0.0,
+      "max": 291922.0,
+      "mean": 11.370316,
+      "median": 2.0,
+      "std": 1046.21969,
+      "p01": 0.0,
+      "p99": 62.0,
+      "zeros_count": 320503,
+      "zeros_pct": 12.458,
+      "negatives_count": 0,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 600,
+      "is_constant": false,
+      "is_near_zero_variance": false,
+      "suspicion_notes": [
+        "Severe outlier skew (max is >1000x the 99th percentile)"
+      ]
+    },
+    "Total Length of Fwd Packets": {
+      "dtype": "int64",
+      "min": 0.0,
+      "max": 12900000.0,
+      "mean": 601.367519,
+      "median": 62.0,
+      "std": 10481.371906,
+      "p01": 0.0,
+      "p99": 11607.0,
+      "zeros_count": 337901,
+      "zeros_pct": 13.134,
+      "negatives_count": 0,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 6531,
+      "is_constant": false,
+      "is_near_zero_variance": false,
+      "suspicion_notes": [
+        "Severe outlier skew (max is >1000x the 99th percentile)"
+      ]
+    },
+    "Total Length of Bwd Packets": {
+      "dtype": "int64",
+      "min": 0.0,
+      "max": 655453030.0,
+      "mean": 17781.140376,
+      "median": 135.0,
+      "std": 2373892.587928,
+      "p01": 0.0,
+      "p99": 80414.18,
+      "zeros_count": 566194,
+      "zeros_pct": 22.008,
+      "negatives_count": 0,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 15048,
+      "is_constant": false,
+      "is_near_zero_variance": false,
+      "suspicion_notes": [
+        "Severe outlier skew (max is >1000x the 99th percentile)"
+      ]
+    },
+    "Fwd Packet Length Max": {
+      "dtype": "int64",
+      "min": 0.0,
+      "max": 24820.0,
+      "mean": 227.260346,
+      "median": 37.0,
+      "std": 749.240558,
+      "p01": 0.0,
+      "p99": 4380.0,
+      "zeros_count": 337901,
+      "zeros_pct": 13.134,
+      "negatives_count": 0,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 2948,
+      "is_constant": false,
+      "is_near_zero_variance": false,
+      "suspicion_notes": []
+    },
+    "Fwd Packet Length Min": {
+      "dtype": "int64",
+      "min": 0.0,
+      "max": 2325.0,
+      "mean": 19.492894,
+      "median": 6.0,
+      "std": 60.380044,
+      "p01": 0.0,
+      "p99": 79.0,
+      "zeros_count": 1199677,
+      "zeros_pct": 46.632,
+      "negatives_count": 0,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 186,
+      "is_constant": false,
+      "is_near_zero_variance": false,
+      "suspicion_notes": []
+    },
+    "Fwd Packet Length Mean": {
+      "dtype": "float64",
+      "min": 0.0,
+      "max": 5940.857143,
+      "mean": 62.908669,
+      "median": 34.0,
+      "std": 193.667624,
+      "p01": 0.0,
+      "p99": 1375.0,
+      "zeros_count": 337901,
+      "zeros_pct": 13.134,
+      "negatives_count": 0,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 20061,
+      "is_constant": false,
+      "is_near_zero_variance": false,
+      "suspicion_notes": []
+    },
+    "Fwd Packet Length Std": {
+      "dtype": "float64",
+      "min": 0.0,
+      "max": 7125.596846,
+      "mean": 75.77514,
+      "median": 0.0,
+      "std": 294.074175,
+      "p01": 0.0,
+      "p99": 1465.326226,
+      "zeros_count": 1599427,
+      "zeros_pct": 62.171,
+      "negatives_count": 0,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 33559,
+      "is_constant": false,
+      "is_near_zero_variance": false,
+      "suspicion_notes": []
+    },
+    "Bwd Packet Length Max": {
+      "dtype": "int64",
+      "min": 0.0,
+      "max": 19530.0,
+      "mean": 956.578454,
+      "median": 87.0,
+      "std": 2021.79398,
+      "p01": 0.0,
+      "p99": 10135.0,
+      "zeros_count": 566194,
+      "zeros_pct": 22.008,
+      "negatives_count": 0,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 3257,
+      "is_constant": false,
+      "is_near_zero_variance": false,
+      "suspicion_notes": []
+    },
+    "Bwd Packet Length Min": {
+      "dtype": "int64",
+      "min": 0.0,
+      "max": 2896.0,
+      "mean": 43.541735,
+      "median": 6.0,
+      "std": 70.683276,
+      "p01": 0.0,
+      "p99": 250.0,
+      "zeros_count": 1296112,
+      "zeros_pct": 50.381,
+      "negatives_count": 0,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 416,
+      "is_constant": false,
+      "is_near_zero_variance": false,
+      "suspicion_notes": []
+    },
+    "Bwd Packet Length Mean": {
+      "dtype": "float64",
+      "min": 0.0,
+      "max": 5800.5,
+      "mean": 335.010911,
+      "median": 79.0,
+      "std": 627.431958,
+      "p01": 0.0,
+      "p99": 2900.25,
+      "zeros_count": 566194,
+      "zeros_pct": 22.008,
+      "negatives_count": 0,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 24903,
+      "is_constant": false,
+      "is_near_zero_variance": false,
+      "suspicion_notes": []
+    },
+    "Bwd Packet Length Std": {
+      "dtype": "float64",
+      "min": 0.0,
+      "max": 8194.660487,
+      "mean": 368.957959,
+      "median": 0.0,
+      "std": 873.735672,
+      "p01": 0.0,
+      "p99": 4413.201989,
+      "zeros_count": 1768647,
+      "zeros_pct": 68.748,
+      "negatives_count": 0,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 31526,
+      "is_constant": false,
+      "is_near_zero_variance": false,
+      "suspicion_notes": []
+    },
+    "Flow Bytes/s": {
+      "dtype": "float64",
+      "min": -261000000.0,
+      "max": 2071000000.0,
+      "mean": 1430298.488588,
+      "median": 4843.348283,
+      "std": 26356449.170296,
+      "p01": 0.0,
+      "p99": 12300000.0,
+      "zeros_count": 280788,
+      "zeros_pct": 10.914,
+      "negatives_count": 84,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 164090,
+      "is_constant": false,
+      "is_near_zero_variance": false,
+      "suspicion_notes": [
+        "Negative values present (84 occurrences, min=-261000000.0)"
+      ]
+    },
+    "Flow Packets/s": {
+      "dtype": "float64",
+      "min": -2000000.0,
+      "max": 4000000.0,
+      "mean": 47358.105251,
+      "median": 83.531721,
+      "std": 202001.741904,
+      "p01": 0.06248,
+      "p99": 750000.0,
+      "zeros_count": 0,
+      "zeros_pct": 0.0,
+      "negatives_count": 113,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 138931,
+      "is_constant": false,
+      "is_near_zero_variance": false,
+      "suspicion_notes": [
+        "Negative values present (113 occurrences, min=-2000000.0)"
+      ]
+    },
+    "Flow IAT Mean": {
+      "dtype": "float64",
+      "min": -13.0,
+      "max": 120000000.0,
+      "mean": 1417088.556726,
+      "median": 16700.940475,
+      "std": 4640196.754178,
+      "p01": 2.0,
+      "p99": 21300000.0,
+      "zeros_count": 0,
+      "zeros_pct": 0.0,
+      "negatives_count": 113,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 133757,
+      "is_constant": false,
+      "is_near_zero_variance": false,
+      "suspicion_notes": [
+        "Negative values present (113 occurrences, min=-13.0)"
+      ]
+    },
+    "Flow IAT Std": {
+      "dtype": "float64",
+      "min": 0.0,
+      "max": 84800261.566408,
+      "mean": 3212095.677111,
+      "median": 4726.296513,
+      "std": 8383776.085854,
+      "p01": 0.0,
+      "p99": 32800000.0,
+      "zeros_count": 791960,
+      "zeros_pct": 30.784,
+      "negatives_count": 0,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 112072,
+      "is_constant": false,
+      "is_near_zero_variance": false,
+      "suspicion_notes": []
+    },
+    "Flow IAT Max": {
+      "dtype": "int64",
+      "min": -13.0,
+      "max": 120000000.0,
+      "mean": 10092027.271561,
+      "median": 35070.5,
+      "std": 25466376.863205,
+      "p01": 3.0,
+      "p99": 99400000.0,
+      "zeros_count": 0,
+      "zeros_pct": 0.0,
+      "negatives_count": 113,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 90033,
+      "is_constant": false,
+      "is_near_zero_variance": false,
+      "suspicion_notes": [
+        "Negative values present (113 occurrences, min=-13.0)"
+      ]
+    },
+    "Flow IAT Min": {
+      "dtype": "int64",
+      "min": -14.0,
+      "max": 120000000.0,
+      "mean": 167073.791413,
+      "median": 4.0,
+      "std": 2983872.375382,
+      "p01": 0.0,
+      "p99": 383872.77,
+      "zeros_count": 71909,
+      "zeros_pct": 2.795,
+      "negatives_count": 2887,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 25610,
+      "is_constant": false,
+      "is_near_zero_variance": false,
+      "suspicion_notes": [
+        "Negative values present (2,887 occurrences, min=-14.0)"
+      ]
+    },
+    "Fwd IAT Total": {
+      "dtype": "int64",
+      "min": 0.0,
+      "max": 120000000.0,
+      "mean": 15924345.521471,
+      "median": 48.0,
+      "std": 34885081.081232,
+      "p01": 0.0,
+      "p99": 118000000.0,
+      "zeros_count": 629529,
+      "zeros_pct": 24.47,
+      "negatives_count": 0,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 58280,
+      "is_constant": false,
+      "is_near_zero_variance": false,
+      "suspicion_notes": []
+    },
+    "Fwd IAT Mean": {
+      "dtype": "float64",
+      "min": 0.0,
+      "max": 120000000.0,
+      "mean": 2860435.312931,
+      "median": 48.0,
+      "std": 9923439.979244,
+      "p01": 0.0,
+      "p99": 55900123.2,
+      "zeros_count": 629529,
+      "zeros_pct": 24.47,
+      "negatives_count": 0,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 80391,
+      "is_constant": false,
+      "is_near_zero_variance": false,
+      "suspicion_notes": []
+    },
+    "Fwd IAT Std": {
+      "dtype": "float64",
+      "min": 0.0,
+      "max": 84602929.276982,
+      "mean": 3594712.807464,
+      "median": 0.0,
+      "std": 10052593.900259,
+      "p01": 0.0,
+      "p99": 42500000.0,
+      "zeros_count": 1523941,
+      "zeros_pct": 59.236,
+      "negatives_count": 0,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 71808,
+      "is_constant": false,
+      "is_near_zero_variance": false,
+      "suspicion_notes": []
+    },
+    "Fwd IAT Max": {
+      "dtype": "int64",
+      "min": 0.0,
+      "max": 120000000.0,
+      "mean": 9938547.110665,
+      "median": 48.0,
+      "std": 25545352.984101,
+      "p01": 0.0,
+      "p99": 99400000.0,
+      "zeros_count": 629529,
+      "zeros_pct": 24.47,
+      "negatives_count": 0,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 57740,
+      "is_constant": false,
+      "is_near_zero_variance": false,
+      "suspicion_notes": []
+    },
+    "Fwd IAT Min": {
+      "dtype": "int64",
+      "min": -12.0,
+      "max": 120000000.0,
+      "mean": 1112790.552922,
+      "median": 3.0,
+      "std": 8969172.523783,
+      "p01": 0.0,
+      "p99": 54801000.000001,
+      "zeros_count": 661128,
+      "zeros_pct": 25.698,
+      "negatives_count": 17,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 18477,
+      "is_constant": false,
+      "is_near_zero_variance": false,
+      "suspicion_notes": [
+        "Negative values present (17 occurrences, min=-12.0)"
+      ]
+    },
+    "Bwd IAT Total": {
+      "dtype": "int64",
+      "min": 0.0,
+      "max": 120000000.0,
+      "mean": 10886361.9974,
+      "median": 3.0,
+      "std": 29963804.382116,
+      "p01": 0.0,
+      "p99": 117000000.0,
+      "zeros_count": 1036103,
+      "zeros_pct": 40.274,
+      "negatives_count": 0,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 48471,
+      "is_constant": false,
+      "is_near_zero_variance": false,
+      "suspicion_notes": []
+    },
+    "Bwd IAT Mean": {
+      "dtype": "float64",
+      "min": 0.0,
+      "max": 120000000.0,
+      "mean": 1986873.051953,
+      "median": 3.0,
+      "std": 9302624.650892,
+      "p01": 0.0,
+      "p99": 57700000.0,
+      "zeros_count": 1036103,
+      "zeros_pct": 40.274,
+      "negatives_count": 0,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 68841,
+      "is_constant": false,
+      "is_near_zero_variance": false,
+      "suspicion_notes": []
+    },
+    "Bwd IAT Std": {
+      "dtype": "float64",
+      "min": 0.0,
+      "max": 84418013.782634,
+      "mean": 1635055.291552,
+      "median": 0.0,
+      "std": 6567357.462567,
+      "p01": 0.0,
+      "p99": 34500000.0,
+      "zeros_count": 1761306,
+      "zeros_pct": 68.463,
+      "negatives_count": 0,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 64364,
+      "is_constant": false,
+      "is_near_zero_variance": false,
+      "suspicion_notes": []
+    },
+    "Bwd IAT Max": {
+      "dtype": "int64",
+      "min": 0.0,
+      "max": 120000000.0,
+      "mean": 5154611.457541,
+      "median": 3.0,
+      "std": 17933611.527455,
+      "p01": 0.0,
+      "p99": 94212899.800001,
+      "zeros_count": 1036103,
+      "zeros_pct": 40.274,
+      "negatives_count": 0,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 48417,
+      "is_constant": false,
+      "is_near_zero_variance": false,
+      "suspicion_notes": []
+    },
+    "Bwd IAT Min": {
+      "dtype": "int64",
+      "min": 0.0,
+      "max": 120000000.0,
+      "mean": 1064224.95461,
+      "median": 2.0,
+      "std": 8709463.145202,
+      "p01": 0.0,
+      "p99": 57100000.0,
+      "zeros_count": 1046394,
+      "zeros_pct": 40.674,
+      "negatives_count": 0,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 9172,
+      "is_constant": false,
+      "is_near_zero_variance": false,
+      "suspicion_notes": []
+    },
+    "Fwd PSH Flags": {
+      "dtype": "int64",
+      "min": 0.0,
+      "max": 1.0,
+      "mean": 0.048037,
+      "median": 0.0,
+      "std": 0.213845,
+      "p01": 0.0,
+      "p99": 1.0,
+      "zeros_count": 2449057,
+      "zeros_pct": 95.196,
+      "negatives_count": 0,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 2,
+      "is_constant": false,
+      "is_near_zero_variance": false,
+      "suspicion_notes": []
+    },
+    "Bwd PSH Flags": {
+      "dtype": "int64",
+      "min": 0.0,
+      "max": 0.0,
+      "mean": 0.0,
+      "median": 0.0,
+      "std": 0.0,
+      "p01": 0.0,
+      "p99": 0.0,
+      "zeros_count": 2572640,
+      "zeros_pct": 100.0,
+      "negatives_count": 0,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 1,
+      "is_constant": true,
+      "is_near_zero_variance": true,
+      "suspicion_notes": [
+        "Constant feature (zero variance across all 2.57M flows)",
+        "Extremely sparse (100.00% zeros)"
+      ]
+    },
+    "Fwd URG Flags": {
+      "dtype": "int64",
+      "min": 0.0,
+      "max": 1.0,
+      "mean": 3.1e-05,
+      "median": 0.0,
+      "std": 0.005576,
+      "p01": 0.0,
+      "p99": 0.0,
+      "zeros_count": 2572560,
+      "zeros_pct": 99.997,
+      "negatives_count": 0,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 2,
+      "is_constant": false,
+      "is_near_zero_variance": true,
+      "suspicion_notes": [
+        "Extremely sparse (100.00% zeros)"
+      ]
+    },
+    "Bwd URG Flags": {
+      "dtype": "int64",
+      "min": 0.0,
+      "max": 0.0,
+      "mean": 0.0,
+      "median": 0.0,
+      "std": 0.0,
+      "p01": 0.0,
+      "p99": 0.0,
+      "zeros_count": 2572640,
+      "zeros_pct": 100.0,
+      "negatives_count": 0,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 1,
+      "is_constant": true,
+      "is_near_zero_variance": true,
+      "suspicion_notes": [
+        "Constant feature (zero variance across all 2.57M flows)",
+        "Extremely sparse (100.00% zeros)"
+      ]
+    },
+    "Fwd Header Length": {
+      "dtype": "int64",
+      "min": -32212234632.0,
+      "max": 4644908.0,
+      "mean": -28610.727927,
+      "median": 64.0,
+      "std": 22083695.232765,
+      "p01": 20.0,
+      "p99": 1412.0,
+      "zeros_count": 1651,
+      "zeros_pct": 0.064,
+      "negatives_count": 35,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 1257,
+      "is_constant": false,
+      "is_near_zero_variance": false,
+      "suspicion_notes": [
+        "Negative values present (35 occurrences, min=-32212234632.0)",
+        "Severe outlier skew (max is >1000x the 99th percentile)"
+      ]
+    },
+    "Bwd Header Length": {
+      "dtype": "int64",
+      "min": -1073741320.0,
+      "max": 5838440.0,
+      "mean": -2502.931293,
+      "median": 40.0,
+      "std": 1523315.185745,
+      "p01": 0.0,
+      "p99": 1672.0,
+      "zeros_count": 320635,
+      "zeros_pct": 12.463,
+      "negatives_count": 22,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 1347,
+      "is_constant": false,
+      "is_near_zero_variance": false,
+      "suspicion_notes": [
+        "Negative values present (22 occurrences, min=-1073741320.0)",
+        "Severe outlier skew (max is >1000x the 99th percentile)"
+      ]
+    },
+    "Fwd Packets/s": {
+      "dtype": "float64",
+      "min": 0.0,
+      "max": 3000000.0,
+      "mean": 40833.617643,
+      "median": 42.276148,
+      "std": 192530.215303,
+      "p01": 0.033306,
+      "p99": 750000.0,
+      "zeros_count": 113,
+      "zeros_pct": 0.004,
+      "negatives_count": 0,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 137954,
+      "is_constant": false,
+      "is_near_zero_variance": false,
+      "suspicion_notes": []
+    },
+    "Bwd Packets/s": {
+      "dtype": "float64",
+      "min": 0.0,
+      "max": 2000000.0,
+      "mean": 6608.831775,
+      "median": 21.471322,
+      "std": 38320.58056,
+      "p01": 0.0,
+      "p99": 76923.07692,
+      "zeros_count": 320616,
+      "zeros_pct": 12.463,
+      "negatives_count": 0,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 123654,
+      "is_constant": false,
+      "is_near_zero_variance": false,
+      "suspicion_notes": []
+    },
+    "Min Packet Length": {
+      "dtype": "int64",
+      "min": 0.0,
+      "max": 1448.0,
+      "mean": 17.163429,
+      "median": 6.0,
+      "std": 25.652413,
+      "p01": 0.0,
+      "p99": 74.0,
+      "zeros_count": 1225442,
+      "zeros_pct": 47.634,
+      "negatives_count": 0,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 150,
+      "is_constant": false,
+      "is_near_zero_variance": false,
+      "suspicion_notes": []
+    },
+    "Max Packet Length": {
+      "dtype": "int64",
+      "min": 0.0,
+      "max": 24820.0,
+      "mean": 1043.644485,
+      "median": 94.0,
+      "std": 2104.898315,
+      "p01": 0.0,
+      "p99": 10135.0,
+      "zeros_count": 280788,
+      "zeros_pct": 10.914,
+      "negatives_count": 0,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 3731,
+      "is_constant": false,
+      "is_near_zero_variance": false,
+      "suspicion_notes": []
+    },
+    "Packet Length Mean": {
+      "dtype": "float64",
+      "min": 0.0,
+      "max": 3337.142857,
+      "mean": 187.748257,
+      "median": 59.8,
+      "std": 315.824493,
+      "p01": 0.0,
+      "p99": 1389.345964,
+      "zeros_count": 280788,
+      "zeros_pct": 10.914,
+      "negatives_count": 0,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 34920,
+      "is_constant": false,
+      "is_near_zero_variance": false,
+      "suspicion_notes": []
+    },
+    "Packet Length Std": {
+      "dtype": "float64",
+      "min": 0.0,
+      "max": 4731.522394,
+      "mean": 323.909705,
+      "median": 29.029296,
+      "std": 655.676502,
+      "p01": 0.0,
+      "p99": 3113.952607,
+      "zeros_count": 570688,
+      "zeros_pct": 22.183,
+      "negatives_count": 0,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 48568,
+      "is_constant": false,
+      "is_near_zero_variance": false,
+      "suspicion_notes": []
+    },
+    "Packet Length Variance": {
+      "dtype": "float64",
+      "min": 0.0,
+      "max": 22400000.0,
+      "mean": 534799.323327,
+      "median": 842.7,
+      "std": 1720596.941204,
+      "p01": 0.0,
+      "p99": 9696700.839,
+      "zeros_count": 570688,
+      "zeros_pct": 22.183,
+      "negatives_count": 0,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 47924,
+      "is_constant": false,
+      "is_near_zero_variance": false,
+      "suspicion_notes": []
+    },
+    "FIN Flag Count": {
+      "dtype": "int64",
+      "min": 0.0,
+      "max": 1.0,
+      "mean": 0.031548,
+      "median": 0.0,
+      "std": 0.174793,
+      "p01": 0.0,
+      "p99": 1.0,
+      "zeros_count": 2491479,
+      "zeros_pct": 96.845,
+      "negatives_count": 0,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 2,
+      "is_constant": false,
+      "is_near_zero_variance": false,
+      "suspicion_notes": []
+    },
+    "SYN Flag Count": {
+      "dtype": "int64",
+      "min": 0.0,
+      "max": 1.0,
+      "mean": 0.048037,
+      "median": 0.0,
+      "std": 0.213845,
+      "p01": 0.0,
+      "p99": 1.0,
+      "zeros_count": 2449057,
+      "zeros_pct": 95.196,
+      "negatives_count": 0,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 2,
+      "is_constant": false,
+      "is_near_zero_variance": false,
+      "suspicion_notes": []
+    },
+    "RST Flag Count": {
+      "dtype": "int64",
+      "min": 0.0,
+      "max": 1.0,
+      "mean": 0.000267,
+      "median": 0.0,
+      "std": 0.016327,
+      "p01": 0.0,
+      "p99": 0.0,
+      "zeros_count": 2571954,
+      "zeros_pct": 99.973,
+      "negatives_count": 0,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 2,
+      "is_constant": false,
+      "is_near_zero_variance": true,
+      "suspicion_notes": [
+        "Extremely sparse (99.97% zeros)"
+      ]
+    },
+    "PSH Flag Count": {
+      "dtype": "int64",
+      "min": 0.0,
+      "max": 1.0,
+      "mean": 0.291614,
+      "median": 0.0,
+      "std": 0.454506,
+      "p01": 0.0,
+      "p99": 1.0,
+      "zeros_count": 1822421,
+      "zeros_pct": 70.839,
+      "negatives_count": 0,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 2,
+      "is_constant": false,
+      "is_near_zero_variance": false,
+      "suspicion_notes": []
+    },
+    "ACK Flag Count": {
+      "dtype": "int64",
+      "min": 0.0,
+      "max": 1.0,
+      "mean": 0.309926,
+      "median": 0.0,
+      "std": 0.462463,
+      "p01": 0.0,
+      "p99": 1.0,
+      "zeros_count": 1775312,
+      "zeros_pct": 69.007,
+      "negatives_count": 0,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 2,
+      "is_constant": false,
+      "is_near_zero_variance": false,
+      "suspicion_notes": []
+    },
+    "URG Flag Count": {
+      "dtype": "int64",
+      "min": 0.0,
+      "max": 1.0,
+      "mean": 0.100492,
+      "median": 0.0,
+      "std": 0.300655,
+      "p01": 0.0,
+      "p99": 1.0,
+      "zeros_count": 2314110,
+      "zeros_pct": 89.951,
+      "negatives_count": 0,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 2,
+      "is_constant": false,
+      "is_near_zero_variance": false,
+      "suspicion_notes": []
+    },
+    "CWE Flag Count": {
+      "dtype": "int64",
+      "min": 0.0,
+      "max": 1.0,
+      "mean": 3.1e-05,
+      "median": 0.0,
+      "std": 0.005576,
+      "p01": 0.0,
+      "p99": 0.0,
+      "zeros_count": 2572560,
+      "zeros_pct": 99.997,
+      "negatives_count": 0,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 2,
+      "is_constant": false,
+      "is_near_zero_variance": true,
+      "suspicion_notes": [
+        "Extremely sparse (100.00% zeros)"
+      ]
+    },
+    "ECE Flag Count": {
+      "dtype": "int64",
+      "min": 0.0,
+      "max": 1.0,
+      "mean": 0.000268,
+      "median": 0.0,
+      "std": 0.016363,
+      "p01": 0.0,
+      "p99": 0.0,
+      "zeros_count": 2571951,
+      "zeros_pct": 99.973,
+      "negatives_count": 0,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 2,
+      "is_constant": false,
+      "is_near_zero_variance": true,
+      "suspicion_notes": [
+        "Extremely sparse (99.97% zeros)"
+      ]
+    },
+    "Down/Up Ratio": {
+      "dtype": "int64",
+      "min": 0.0,
+      "max": 156.0,
+      "mean": 0.703265,
+      "median": 1.0,
+      "std": 0.691631,
+      "p01": 0.0,
+      "p99": 4.0,
+      "zeros_count": 913881,
+      "zeros_pct": 35.523,
+      "negatives_count": 0,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 12,
+      "is_constant": false,
+      "is_near_zero_variance": false,
+      "suspicion_notes": []
+    },
+    "Average Packet Size": {
+      "dtype": "float64",
+      "min": 0.0,
+      "max": 3893.333333,
+      "mean": 209.349149,
+      "median": 75.52,
+      "std": 342.739361,
+      "p01": 0.0,
+      "p99": 1661.0,
+      "zeros_count": 280788,
+      "zeros_pct": 10.914,
+      "negatives_count": 0,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 33919,
+      "is_constant": false,
+      "is_near_zero_variance": false,
+      "suspicion_notes": []
+    },
+    "Avg Fwd Segment Size": {
+      "dtype": "float64",
+      "min": 0.0,
+      "max": 5940.857143,
+      "mean": 62.908669,
+      "median": 34.0,
+      "std": 193.667624,
+      "p01": 0.0,
+      "p99": 1375.0,
+      "zeros_count": 337901,
+      "zeros_pct": 13.134,
+      "negatives_count": 0,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 20061,
+      "is_constant": false,
+      "is_near_zero_variance": false,
+      "suspicion_notes": []
+    },
+    "Avg Bwd Segment Size": {
+      "dtype": "float64",
+      "min": 0.0,
+      "max": 5800.5,
+      "mean": 335.010911,
+      "median": 79.0,
+      "std": 627.431958,
+      "p01": 0.0,
+      "p99": 2900.25,
+      "zeros_count": 566194,
+      "zeros_pct": 22.008,
+      "negatives_count": 0,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 24903,
+      "is_constant": false,
+      "is_near_zero_variance": false,
+      "suspicion_notes": []
+    },
+    "Fwd Header Length.1": {
+      "dtype": "int64",
+      "min": -32212234632.0,
+      "max": 4644908.0,
+      "mean": -28610.727927,
+      "median": 64.0,
+      "std": 22083695.232765,
+      "p01": 20.0,
+      "p99": 1412.0,
+      "zeros_count": 1651,
+      "zeros_pct": 0.064,
+      "negatives_count": 35,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 1257,
+      "is_constant": false,
+      "is_near_zero_variance": false,
+      "suspicion_notes": [
+        "Negative values present (35 occurrences, min=-32212234632.0)",
+        "Severe outlier skew (max is >1000x the 99th percentile)"
+      ]
+    },
+    "Fwd Avg Bytes/Bulk": {
+      "dtype": "int64",
+      "min": 0.0,
+      "max": 0.0,
+      "mean": 0.0,
+      "median": 0.0,
+      "std": 0.0,
+      "p01": 0.0,
+      "p99": 0.0,
+      "zeros_count": 2572640,
+      "zeros_pct": 100.0,
+      "negatives_count": 0,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 1,
+      "is_constant": true,
+      "is_near_zero_variance": true,
+      "suspicion_notes": [
+        "Constant feature (zero variance across all 2.57M flows)",
+        "Extremely sparse (100.00% zeros)"
+      ]
+    },
+    "Fwd Avg Packets/Bulk": {
+      "dtype": "int64",
+      "min": 0.0,
+      "max": 0.0,
+      "mean": 0.0,
+      "median": 0.0,
+      "std": 0.0,
+      "p01": 0.0,
+      "p99": 0.0,
+      "zeros_count": 2572640,
+      "zeros_pct": 100.0,
+      "negatives_count": 0,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 1,
+      "is_constant": true,
+      "is_near_zero_variance": true,
+      "suspicion_notes": [
+        "Constant feature (zero variance across all 2.57M flows)",
+        "Extremely sparse (100.00% zeros)"
+      ]
+    },
+    "Fwd Avg Bulk Rate": {
+      "dtype": "int64",
+      "min": 0.0,
+      "max": 0.0,
+      "mean": 0.0,
+      "median": 0.0,
+      "std": 0.0,
+      "p01": 0.0,
+      "p99": 0.0,
+      "zeros_count": 2572640,
+      "zeros_pct": 100.0,
+      "negatives_count": 0,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 1,
+      "is_constant": true,
+      "is_near_zero_variance": true,
+      "suspicion_notes": [
+        "Constant feature (zero variance across all 2.57M flows)",
+        "Extremely sparse (100.00% zeros)"
+      ]
+    },
+    "Bwd Avg Bytes/Bulk": {
+      "dtype": "int64",
+      "min": 0.0,
+      "max": 0.0,
+      "mean": 0.0,
+      "median": 0.0,
+      "std": 0.0,
+      "p01": 0.0,
+      "p99": 0.0,
+      "zeros_count": 2572640,
+      "zeros_pct": 100.0,
+      "negatives_count": 0,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 1,
+      "is_constant": true,
+      "is_near_zero_variance": true,
+      "suspicion_notes": [
+        "Constant feature (zero variance across all 2.57M flows)",
+        "Extremely sparse (100.00% zeros)"
+      ]
+    },
+    "Bwd Avg Packets/Bulk": {
+      "dtype": "int64",
+      "min": 0.0,
+      "max": 0.0,
+      "mean": 0.0,
+      "median": 0.0,
+      "std": 0.0,
+      "p01": 0.0,
+      "p99": 0.0,
+      "zeros_count": 2572640,
+      "zeros_pct": 100.0,
+      "negatives_count": 0,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 1,
+      "is_constant": true,
+      "is_near_zero_variance": true,
+      "suspicion_notes": [
+        "Constant feature (zero variance across all 2.57M flows)",
+        "Extremely sparse (100.00% zeros)"
+      ]
+    },
+    "Bwd Avg Bulk Rate": {
+      "dtype": "int64",
+      "min": 0.0,
+      "max": 0.0,
+      "mean": 0.0,
+      "median": 0.0,
+      "std": 0.0,
+      "p01": 0.0,
+      "p99": 0.0,
+      "zeros_count": 2572640,
+      "zeros_pct": 100.0,
+      "negatives_count": 0,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 1,
+      "is_constant": true,
+      "is_near_zero_variance": true,
+      "suspicion_notes": [
+        "Constant feature (zero variance across all 2.57M flows)",
+        "Extremely sparse (100.00% zeros)"
+      ]
+    },
+    "Subflow Fwd Packets": {
+      "dtype": "int64",
+      "min": 1.0,
+      "max": 219759.0,
+      "mean": 10.116043,
+      "median": 2.0,
+      "std": 786.37593,
+      "p01": 1.0,
+      "p99": 51.0,
+      "zeros_count": 0,
+      "zeros_pct": 0.0,
+      "negatives_count": 0,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 485,
+      "is_constant": false,
+      "is_near_zero_variance": false,
+      "suspicion_notes": [
+        "Severe outlier skew (max is >1000x the 99th percentile)"
+      ]
+    },
+    "Subflow Fwd Bytes": {
+      "dtype": "int64",
+      "min": 0.0,
+      "max": 12870338.0,
+      "mean": 601.355989,
+      "median": 62.0,
+      "std": 10467.188935,
+      "p01": 0.0,
+      "p99": 11607.0,
+      "zeros_count": 337901,
+      "zeros_pct": 13.134,
+      "negatives_count": 0,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 6531,
+      "is_constant": false,
+      "is_near_zero_variance": false,
+      "suspicion_notes": [
+        "Severe outlier skew (max is >1000x the 99th percentile)"
+      ]
+    },
+    "Subflow Bwd Packets": {
+      "dtype": "int64",
+      "min": 0.0,
+      "max": 291922.0,
+      "mean": 11.370316,
+      "median": 2.0,
+      "std": 1046.21969,
+      "p01": 0.0,
+      "p99": 62.0,
+      "zeros_count": 320503,
+      "zeros_pct": 12.458,
+      "negatives_count": 0,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 600,
+      "is_constant": false,
+      "is_near_zero_variance": false,
+      "suspicion_notes": [
+        "Severe outlier skew (max is >1000x the 99th percentile)"
+      ]
+    },
+    "Subflow Bwd Bytes": {
+      "dtype": "int64",
+      "min": 0.0,
+      "max": 655453030.0,
+      "mean": 17780.766179,
+      "median": 135.0,
+      "std": 2373860.313338,
+      "p01": 0.0,
+      "p99": 80414.18,
+      "zeros_count": 566194,
+      "zeros_pct": 22.008,
+      "negatives_count": 0,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 15051,
+      "is_constant": false,
+      "is_near_zero_variance": false,
+      "suspicion_notes": [
+        "Severe outlier skew (max is >1000x the 99th percentile)"
+      ]
+    },
+    "Init_Win_bytes_forward": {
+      "dtype": "int64",
+      "min": -1.0,
+      "max": 65535.0,
+      "mean": 7145.029545,
+      "median": 255.0,
+      "std": 14521.845561,
+      "p01": -1.0,
+      "p99": 65535.0,
+      "zeros_count": 80782,
+      "zeros_pct": 3.14,
+      "negatives_count": 951492,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 4173,
+      "is_constant": false,
+      "is_near_zero_variance": false,
+      "suspicion_notes": [
+        "Negative values present (951,492 occurrences, min=-1.0)"
+      ]
+    },
+    "Init_Win_bytes_backward": {
+      "dtype": "int64",
+      "min": -1.0,
+      "max": 65535.0,
+      "mean": 2184.280148,
+      "median": 0.0,
+      "std": 8839.675112,
+      "p01": -1.0,
+      "p99": 46200.06,
+      "zeros_count": 202060,
+      "zeros_pct": 7.854,
+      "negatives_count": 1264134,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 4294,
+      "is_constant": false,
+      "is_near_zero_variance": false,
+      "suspicion_notes": [
+        "Negative values present (1,264,134 occurrences, min=-1.0)"
+      ]
+    },
+    "act_data_pkt_fwd": {
+      "dtype": "int64",
+      "min": 0.0,
+      "max": 213557.0,
+      "mean": 5.908845,
+      "median": 1.0,
+      "std": 667.585703,
+      "p01": 0.0,
+      "p99": 30.0,
+      "zeros_count": 806947,
+      "zeros_pct": 31.366,
+      "negatives_count": 0,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 384,
+      "is_constant": false,
+      "is_near_zero_variance": false,
+      "suspicion_notes": [
+        "Severe outlier skew (max is >1000x the 99th percentile)"
+      ]
+    },
+    "min_seg_size_forward": {
+      "dtype": "int64",
+      "min": -536870661.0,
+      "max": 138.0,
+      "mean": -3019.597812,
+      "median": 20.0,
+      "std": 1138114.788635,
+      "p01": 20.0,
+      "p99": 40.0,
+      "zeros_count": 1720,
+      "zeros_pct": 0.067,
+      "negatives_count": 35,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 19,
+      "is_constant": false,
+      "is_near_zero_variance": false,
+      "suspicion_notes": [
+        "Negative values present (35 occurrences, min=-536870661.0)"
+      ]
+    },
+    "Active Mean": {
+      "dtype": "float64",
+      "min": 0.0,
+      "max": 110000000.0,
+      "mean": 89733.048908,
+      "median": 0.0,
+      "std": 679818.435343,
+      "p01": 0.0,
+      "p99": 2735992.32,
+      "zeros_count": 2013815,
+      "zeros_pct": 78.278,
+      "negatives_count": 0,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 37418,
+      "is_constant": false,
+      "is_near_zero_variance": false,
+      "suspicion_notes": []
+    },
+    "Active Std": {
+      "dtype": "float64",
+      "min": 0.0,
+      "max": 74200000.0,
+      "mean": 45260.943281,
+      "median": 0.0,
+      "std": 412416.78863,
+      "p01": 0.0,
+      "p99": 1186736.78292,
+      "zeros_count": 2367106,
+      "zeros_pct": 92.011,
+      "negatives_count": 0,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 19253,
+      "is_constant": false,
+      "is_near_zero_variance": false,
+      "suspicion_notes": []
+    },
+    "Active Max": {
+      "dtype": "int64",
+      "min": 0.0,
+      "max": 110000000.0,
+      "mean": 168550.729854,
+      "median": 0.0,
+      "std": 1074849.510521,
+      "p01": 0.0,
+      "p99": 4270092.09,
+      "zeros_count": 2013815,
+      "zeros_pct": 78.278,
+      "negatives_count": 0,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 36914,
+      "is_constant": false,
+      "is_near_zero_variance": false,
+      "suspicion_notes": []
+    },
+    "Active Min": {
+      "dtype": "int64",
+      "min": 0.0,
+      "max": 110000000.0,
+      "mean": 64144.411132,
+      "median": 0.0,
+      "std": 605039.27245,
+      "p01": 0.0,
+      "p99": 2081092.23,
+      "zeros_count": 2013815,
+      "zeros_pct": 78.278,
+      "negatives_count": 0,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 29061,
+      "is_constant": false,
+      "is_near_zero_variance": false,
+      "suspicion_notes": []
+    },
+    "Idle Mean": {
+      "dtype": "float64",
+      "min": 0.0,
+      "max": 120000000.0,
+      "mean": 9149207.240124,
+      "median": 0.0,
+      "std": 24631517.268442,
+      "p01": 0.0,
+      "p99": 99200000.0,
+      "zeros_count": 2005405,
+      "zeros_pct": 77.951,
+      "negatives_count": 0,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 22273,
+      "is_constant": false,
+      "is_near_zero_variance": false,
+      "suspicion_notes": []
+    },
+    "Idle Std": {
+      "dtype": "float64",
+      "min": 0.0,
+      "max": 76900000.0,
+      "mean": 554392.660431,
+      "median": 0.0,
+      "std": 4825463.653114,
+      "p01": 0.0,
+      "p99": 37500000.0,
+      "zeros_count": 2343397,
+      "zeros_pct": 91.089,
+      "negatives_count": 0,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 19117,
+      "is_constant": false,
+      "is_near_zero_variance": false,
+      "suspicion_notes": []
+    },
+    "Idle Max": {
+      "dtype": "int64",
+      "min": 0.0,
+      "max": 120000000.0,
+      "mean": 9567017.967583,
+      "median": 0.0,
+      "std": 25395120.43638,
+      "p01": 0.0,
+      "p99": 99300000.0,
+      "zeros_count": 2005405,
+      "zeros_pct": 77.951,
+      "negatives_count": 0,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 16185,
+      "is_constant": false,
+      "is_near_zero_variance": false,
+      "suspicion_notes": []
+    },
+    "Idle Min": {
+      "dtype": "int64",
+      "min": 0.0,
+      "max": 120000000.0,
+      "mean": 8713471.919308,
+      "median": 0.0,
+      "std": 24364563.026928,
+      "p01": 0.0,
+      "p99": 99200000.0,
+      "zeros_count": 2005405,
+      "zeros_pct": 77.951,
+      "negatives_count": 0,
+      "pos_infs_count": 0,
+      "neg_infs_count": 0,
+      "nans_count": 0,
+      "unique_sample": 26267,
+      "is_constant": false,
+      "is_near_zero_variance": false,
+      "suspicion_notes": []
+    }
+  },
+  "decision_table": [
+    {
+      "feature": "Destination Port",
+      "category": "Port fields",
+      "group": "Network Endpoint & Identifiers",
+      "status": "Discuss",
+      "rationale": "Identifies target service (80, 443, 21, 22), but risks model shortcut learning/overfitting to specific lab IP/port setups. For pure behavioral anomaly detection, drop or group into categorical service tiers."
+    },
+    {
+      "feature": "Flow Duration",
+      "category": "Numerical traffic features",
+      "group": "Temporal & Inter-Arrival Time (IAT) Signals",
+      "status": "Transform",
+      "rationale": "Core temporal signal. Contains rare microsecond timestamp jitter (<0) and extreme spans (microseconds to 120s). Requires clipping negatives and log1p transformation."
+    },
+    {
+      "feature": "Total Fwd Packets",
+      "category": "Numerical traffic features",
+      "group": "Bulk & Subflow Signals",
+      "status": "Keep",
+      "rationale": "Informative numerical traffic metric with healthy distribution and variance."
+    },
+    {
+      "feature": "Total Backward Packets",
+      "category": "Numerical traffic features",
+      "group": "Bulk & Subflow Signals",
+      "status": "Keep",
+      "rationale": "Informative numerical traffic metric with healthy distribution and variance."
+    },
+    {
+      "feature": "Total Length of Fwd Packets",
+      "category": "Numerical traffic features",
+      "group": "Volume & Size Signals",
+      "status": "Keep",
+      "rationale": "Informative numerical traffic metric with healthy distribution and variance."
+    },
+    {
+      "feature": "Total Length of Bwd Packets",
+      "category": "Numerical traffic features",
+      "group": "Volume & Size Signals",
+      "status": "Keep",
+      "rationale": "Informative numerical traffic metric with healthy distribution and variance."
+    },
+    {
+      "feature": "Fwd Packet Length Max",
+      "category": "Numerical traffic features",
+      "group": "Volume & Size Signals",
+      "status": "Keep",
+      "rationale": "Informative numerical traffic metric with healthy distribution and variance."
+    },
+    {
+      "feature": "Fwd Packet Length Min",
+      "category": "Numerical traffic features",
+      "group": "Volume & Size Signals",
+      "status": "Keep",
+      "rationale": "Informative numerical traffic metric with healthy distribution and variance."
+    },
+    {
+      "feature": "Fwd Packet Length Mean",
+      "category": "Numerical traffic features",
+      "group": "Volume & Size Signals",
+      "status": "Keep",
+      "rationale": "Informative numerical traffic metric with healthy distribution and variance."
+    },
+    {
+      "feature": "Fwd Packet Length Std",
+      "category": "Numerical traffic features",
+      "group": "Volume & Size Signals",
+      "status": "Keep",
+      "rationale": "Informative numerical traffic metric with healthy distribution and variance."
+    },
+    {
+      "feature": "Bwd Packet Length Max",
+      "category": "Numerical traffic features",
+      "group": "Volume & Size Signals",
+      "status": "Keep",
+      "rationale": "Informative numerical traffic metric with healthy distribution and variance."
+    },
+    {
+      "feature": "Bwd Packet Length Min",
+      "category": "Numerical traffic features",
+      "group": "Volume & Size Signals",
+      "status": "Keep",
+      "rationale": "Informative numerical traffic metric with healthy distribution and variance."
+    },
+    {
+      "feature": "Bwd Packet Length Mean",
+      "category": "Numerical traffic features",
+      "group": "Volume & Size Signals",
+      "status": "Keep",
+      "rationale": "Informative numerical traffic metric with healthy distribution and variance."
+    },
+    {
+      "feature": "Bwd Packet Length Std",
+      "category": "Numerical traffic features",
+      "group": "Volume & Size Signals",
+      "status": "Keep",
+      "rationale": "Informative numerical traffic metric with healthy distribution and variance."
+    },
+    {
+      "feature": "Flow Bytes/s",
+      "category": "Numerical traffic features",
+      "group": "Rate & Velocity Signals",
+      "status": "Transform",
+      "rationale": "Core rate signal. Extreme right-skew (max values up to 10^9) and rare negative values from Delta t < 0. Requires clipping negatives and log1p/robust scaling."
+    },
+    {
+      "feature": "Flow Packets/s",
+      "category": "Numerical traffic features",
+      "group": "Rate & Velocity Signals",
+      "status": "Transform",
+      "rationale": "Core rate signal. Extreme right-skew (max values up to 10^9) and rare negative values from Delta t < 0. Requires clipping negatives and log1p/robust scaling."
+    },
+    {
+      "feature": "Flow IAT Mean",
+      "category": "Numerical traffic features",
+      "group": "Temporal & Inter-Arrival Time (IAT) Signals",
+      "status": "Transform",
+      "rationale": "Core temporal signal. Contains rare microsecond timestamp jitter (<0) and extreme spans (microseconds to 120s). Requires clipping negatives and log1p transformation."
+    },
+    {
+      "feature": "Flow IAT Std",
+      "category": "Numerical traffic features",
+      "group": "Temporal & Inter-Arrival Time (IAT) Signals",
+      "status": "Transform",
+      "rationale": "Core temporal signal. Contains rare microsecond timestamp jitter (<0) and extreme spans (microseconds to 120s). Requires clipping negatives and log1p transformation."
+    },
+    {
+      "feature": "Flow IAT Max",
+      "category": "Numerical traffic features",
+      "group": "Temporal & Inter-Arrival Time (IAT) Signals",
+      "status": "Transform",
+      "rationale": "Core temporal signal. Contains rare microsecond timestamp jitter (<0) and extreme spans (microseconds to 120s). Requires clipping negatives and log1p transformation."
+    },
+    {
+      "feature": "Flow IAT Min",
+      "category": "Numerical traffic features",
+      "group": "Temporal & Inter-Arrival Time (IAT) Signals",
+      "status": "Transform",
+      "rationale": "Core temporal signal. Contains rare microsecond timestamp jitter (<0) and extreme spans (microseconds to 120s). Requires clipping negatives and log1p transformation."
+    },
+    {
+      "feature": "Fwd IAT Total",
+      "category": "Numerical traffic features",
+      "group": "Temporal & Inter-Arrival Time (IAT) Signals",
+      "status": "Transform",
+      "rationale": "Core temporal signal. Contains rare microsecond timestamp jitter (<0) and extreme spans (microseconds to 120s). Requires clipping negatives and log1p transformation."
+    },
+    {
+      "feature": "Fwd IAT Mean",
+      "category": "Numerical traffic features",
+      "group": "Temporal & Inter-Arrival Time (IAT) Signals",
+      "status": "Transform",
+      "rationale": "Core temporal signal. Contains rare microsecond timestamp jitter (<0) and extreme spans (microseconds to 120s). Requires clipping negatives and log1p transformation."
+    },
+    {
+      "feature": "Fwd IAT Std",
+      "category": "Numerical traffic features",
+      "group": "Temporal & Inter-Arrival Time (IAT) Signals",
+      "status": "Transform",
+      "rationale": "Core temporal signal. Contains rare microsecond timestamp jitter (<0) and extreme spans (microseconds to 120s). Requires clipping negatives and log1p transformation."
+    },
+    {
+      "feature": "Fwd IAT Max",
+      "category": "Numerical traffic features",
+      "group": "Temporal & Inter-Arrival Time (IAT) Signals",
+      "status": "Transform",
+      "rationale": "Core temporal signal. Contains rare microsecond timestamp jitter (<0) and extreme spans (microseconds to 120s). Requires clipping negatives and log1p transformation."
+    },
+    {
+      "feature": "Fwd IAT Min",
+      "category": "Numerical traffic features",
+      "group": "Temporal & Inter-Arrival Time (IAT) Signals",
+      "status": "Transform",
+      "rationale": "Core temporal signal. Contains rare microsecond timestamp jitter (<0) and extreme spans (microseconds to 120s). Requires clipping negatives and log1p transformation."
+    },
+    {
+      "feature": "Bwd IAT Total",
+      "category": "Numerical traffic features",
+      "group": "Temporal & Inter-Arrival Time (IAT) Signals",
+      "status": "Transform",
+      "rationale": "Core temporal signal. Contains rare microsecond timestamp jitter (<0) and extreme spans (microseconds to 120s). Requires clipping negatives and log1p transformation."
+    },
+    {
+      "feature": "Bwd IAT Mean",
+      "category": "Numerical traffic features",
+      "group": "Temporal & Inter-Arrival Time (IAT) Signals",
+      "status": "Transform",
+      "rationale": "Core temporal signal. Contains rare microsecond timestamp jitter (<0) and extreme spans (microseconds to 120s). Requires clipping negatives and log1p transformation."
+    },
+    {
+      "feature": "Bwd IAT Std",
+      "category": "Numerical traffic features",
+      "group": "Temporal & Inter-Arrival Time (IAT) Signals",
+      "status": "Transform",
+      "rationale": "Core temporal signal. Contains rare microsecond timestamp jitter (<0) and extreme spans (microseconds to 120s). Requires clipping negatives and log1p transformation."
+    },
+    {
+      "feature": "Bwd IAT Max",
+      "category": "Numerical traffic features",
+      "group": "Temporal & Inter-Arrival Time (IAT) Signals",
+      "status": "Transform",
+      "rationale": "Core temporal signal. Contains rare microsecond timestamp jitter (<0) and extreme spans (microseconds to 120s). Requires clipping negatives and log1p transformation."
+    },
+    {
+      "feature": "Bwd IAT Min",
+      "category": "Numerical traffic features",
+      "group": "Temporal & Inter-Arrival Time (IAT) Signals",
+      "status": "Transform",
+      "rationale": "Core temporal signal. Contains rare microsecond timestamp jitter (<0) and extreme spans (microseconds to 120s). Requires clipping negatives and log1p transformation."
+    },
+    {
+      "feature": "Fwd PSH Flags",
+      "category": "Numerical traffic features",
+      "group": "TCP Protocol State & Flag Signals",
+      "status": "Keep",
+      "rationale": "Informative numerical traffic metric with healthy distribution and variance."
+    },
+    {
+      "feature": "Bwd PSH Flags",
+      "category": "Numerical traffic features",
+      "group": "TCP Protocol State & Flag Signals",
+      "status": "Drop",
+      "rationale": "Zero variance (constant = 0.0) across all 2,572,640 flows. Provides 0 discriminative information."
+    },
+    {
+      "feature": "Fwd URG Flags",
+      "category": "Numerical traffic features",
+      "group": "TCP Protocol State & Flag Signals",
+      "status": "Drop",
+      "rationale": "Near-constant (99.9970% zeros, max=1.0). Unreliable and negligible information."
+    },
+    {
+      "feature": "Bwd URG Flags",
+      "category": "Numerical traffic features",
+      "group": "TCP Protocol State & Flag Signals",
+      "status": "Drop",
+      "rationale": "Zero variance (constant = 0.0) across all 2,572,640 flows. Provides 0 discriminative information."
+    },
+    {
+      "feature": "Fwd Header Length",
+      "category": "Numerical traffic features",
+      "group": "TCP Protocol State & Flag Signals",
+      "status": "Transform",
+      "rationale": "Contains negative values (35 rows, min=-3.22e+10) from CICFlowMeter 32-bit integer underflow bug. Needs clipping to 0."
+    },
+    {
+      "feature": "Bwd Header Length",
+      "category": "Numerical traffic features",
+      "group": "TCP Protocol State & Flag Signals",
+      "status": "Transform",
+      "rationale": "Contains negative values (22 rows, min=-1.07e+09) from CICFlowMeter 32-bit integer underflow bug. Needs clipping to 0."
+    },
+    {
+      "feature": "Fwd Packets/s",
+      "category": "Numerical traffic features",
+      "group": "Rate & Velocity Signals",
+      "status": "Transform",
+      "rationale": "Core rate signal. Extreme right-skew (max values up to 10^9) and rare negative values from Delta t < 0. Requires clipping negatives and log1p/robust scaling."
+    },
+    {
+      "feature": "Bwd Packets/s",
+      "category": "Numerical traffic features",
+      "group": "Rate & Velocity Signals",
+      "status": "Transform",
+      "rationale": "Core rate signal. Extreme right-skew (max values up to 10^9) and rare negative values from Delta t < 0. Requires clipping negatives and log1p/robust scaling."
+    },
+    {
+      "feature": "Min Packet Length",
+      "category": "Numerical traffic features",
+      "group": "Volume & Size Signals",
+      "status": "Keep",
+      "rationale": "Informative numerical traffic metric with healthy distribution and variance."
+    },
+    {
+      "feature": "Max Packet Length",
+      "category": "Numerical traffic features",
+      "group": "Volume & Size Signals",
+      "status": "Keep",
+      "rationale": "Informative numerical traffic metric with healthy distribution and variance."
+    },
+    {
+      "feature": "Packet Length Mean",
+      "category": "Numerical traffic features",
+      "group": "Volume & Size Signals",
+      "status": "Keep",
+      "rationale": "Informative numerical traffic metric with healthy distribution and variance."
+    },
+    {
+      "feature": "Packet Length Std",
+      "category": "Numerical traffic features",
+      "group": "Volume & Size Signals",
+      "status": "Keep",
+      "rationale": "Informative numerical traffic metric with healthy distribution and variance."
+    },
+    {
+      "feature": "Packet Length Variance",
+      "category": "Numerical traffic features",
+      "group": "Volume & Size Signals",
+      "status": "Drop",
+      "rationale": "Direct mathematical square of 'Packet Length Std' (r = 0.98+). Redundant quadratic scale."
+    },
+    {
+      "feature": "FIN Flag Count",
+      "category": "Numerical traffic features",
+      "group": "TCP Protocol State & Flag Signals",
+      "status": "Keep",
+      "rationale": "Key protocol anomaly indicators (essential for detecting SYN floods, PortScans, FIN scans, RST attacks)."
+    },
+    {
+      "feature": "SYN Flag Count",
+      "category": "Numerical traffic features",
+      "group": "TCP Protocol State & Flag Signals",
+      "status": "Keep",
+      "rationale": "Key protocol anomaly indicators (essential for detecting SYN floods, PortScans, FIN scans, RST attacks)."
+    },
+    {
+      "feature": "RST Flag Count",
+      "category": "Numerical traffic features",
+      "group": "TCP Protocol State & Flag Signals",
+      "status": "Keep",
+      "rationale": "Key protocol anomaly indicators (essential for detecting SYN floods, PortScans, FIN scans, RST attacks)."
+    },
+    {
+      "feature": "PSH Flag Count",
+      "category": "Numerical traffic features",
+      "group": "TCP Protocol State & Flag Signals",
+      "status": "Keep",
+      "rationale": "Key protocol anomaly indicators (essential for detecting SYN floods, PortScans, FIN scans, RST attacks)."
+    },
+    {
+      "feature": "ACK Flag Count",
+      "category": "Numerical traffic features",
+      "group": "TCP Protocol State & Flag Signals",
+      "status": "Keep",
+      "rationale": "Key protocol anomaly indicators (essential for detecting SYN floods, PortScans, FIN scans, RST attacks)."
+    },
+    {
+      "feature": "URG Flag Count",
+      "category": "Numerical traffic features",
+      "group": "TCP Protocol State & Flag Signals",
+      "status": "Keep",
+      "rationale": "Key protocol anomaly indicators (essential for detecting SYN floods, PortScans, FIN scans, RST attacks)."
+    },
+    {
+      "feature": "CWE Flag Count",
+      "category": "Numerical traffic features",
+      "group": "TCP Protocol State & Flag Signals",
+      "status": "Drop",
+      "rationale": "Near-constant (99.9970% zeros, max=1.0). Unreliable and negligible information."
+    },
+    {
+      "feature": "ECE Flag Count",
+      "category": "Numerical traffic features",
+      "group": "TCP Protocol State & Flag Signals",
+      "status": "Keep",
+      "rationale": "Key protocol anomaly indicators (essential for detecting SYN floods, PortScans, FIN scans, RST attacks)."
+    },
+    {
+      "feature": "Down/Up Ratio",
+      "category": "Numerical traffic features",
+      "group": "TCP Protocol State & Flag Signals",
+      "status": "Keep",
+      "rationale": "Informative numerical traffic metric with healthy distribution and variance."
+    },
+    {
+      "feature": "Average Packet Size",
+      "category": "Numerical traffic features",
+      "group": "Volume & Size Signals",
+      "status": "Keep",
+      "rationale": "Informative numerical traffic metric with healthy distribution and variance."
+    },
+    {
+      "feature": "Avg Fwd Segment Size",
+      "category": "Numerical traffic features",
+      "group": "Volume & Size Signals",
+      "status": "Drop",
+      "rationale": "Mathematically identical to 'Fwd Packet Length Mean' (r = 1.0000). Segment size equals packet payload length in TCP/UDP."
+    },
+    {
+      "feature": "Avg Bwd Segment Size",
+      "category": "Numerical traffic features",
+      "group": "Volume & Size Signals",
+      "status": "Drop",
+      "rationale": "Mathematically identical to 'Bwd Packet Length Mean' (r = 1.0000). Segment size equals packet payload length in TCP/UDP."
+    },
+    {
+      "feature": "Fwd Header Length.1",
+      "category": "Potential duplicate/redundant features",
+      "group": "TCP Protocol State & Flag Signals",
+      "status": "Drop",
+      "rationale": "Exact byte-for-byte duplicate of 'Fwd Header Length' (r = 1.0000, 100% identical). 0 new information."
+    },
+    {
+      "feature": "Fwd Avg Bytes/Bulk",
+      "category": "Numerical traffic features",
+      "group": "Bulk & Subflow Signals",
+      "status": "Drop",
+      "rationale": "Zero variance (constant = 0.0) across all 2,572,640 flows. Provides 0 discriminative information."
+    },
+    {
+      "feature": "Fwd Avg Packets/Bulk",
+      "category": "Numerical traffic features",
+      "group": "Bulk & Subflow Signals",
+      "status": "Drop",
+      "rationale": "Zero variance (constant = 0.0) across all 2,572,640 flows. Provides 0 discriminative information."
+    },
+    {
+      "feature": "Fwd Avg Bulk Rate",
+      "category": "Numerical traffic features",
+      "group": "Bulk & Subflow Signals",
+      "status": "Drop",
+      "rationale": "Zero variance (constant = 0.0) across all 2,572,640 flows. Provides 0 discriminative information."
+    },
+    {
+      "feature": "Bwd Avg Bytes/Bulk",
+      "category": "Numerical traffic features",
+      "group": "Bulk & Subflow Signals",
+      "status": "Drop",
+      "rationale": "Zero variance (constant = 0.0) across all 2,572,640 flows. Provides 0 discriminative information."
+    },
+    {
+      "feature": "Bwd Avg Packets/Bulk",
+      "category": "Numerical traffic features",
+      "group": "Bulk & Subflow Signals",
+      "status": "Drop",
+      "rationale": "Zero variance (constant = 0.0) across all 2,572,640 flows. Provides 0 discriminative information."
+    },
+    {
+      "feature": "Bwd Avg Bulk Rate",
+      "category": "Numerical traffic features",
+      "group": "Bulk & Subflow Signals",
+      "status": "Drop",
+      "rationale": "Zero variance (constant = 0.0) across all 2,572,640 flows. Provides 0 discriminative information."
+    },
+    {
+      "feature": "Subflow Fwd Packets",
+      "category": "Potential duplicate/redundant features",
+      "group": "Bulk & Subflow Signals",
+      "status": "Drop",
+      "rationale": "Exact duplicate of 'Total Fwd Packets' in CICFlowMeter single-flow window (r = 1.0000). Redundant."
+    },
+    {
+      "feature": "Subflow Fwd Bytes",
+      "category": "Potential duplicate/redundant features",
+      "group": "Bulk & Subflow Signals",
+      "status": "Drop",
+      "rationale": "Exact duplicate of 'Total Length of Fwd Packets' in CICFlowMeter single-flow window (r = 1.0000). Redundant."
+    },
+    {
+      "feature": "Subflow Bwd Packets",
+      "category": "Potential duplicate/redundant features",
+      "group": "Bulk & Subflow Signals",
+      "status": "Drop",
+      "rationale": "Exact duplicate of 'Total Backward Packets' in CICFlowMeter single-flow window (r = 1.0000). Redundant."
+    },
+    {
+      "feature": "Subflow Bwd Bytes",
+      "category": "Potential duplicate/redundant features",
+      "group": "Bulk & Subflow Signals",
+      "status": "Drop",
+      "rationale": "Exact duplicate of 'Total Length of Bwd Packets' in CICFlowMeter single-flow window (r = 1.0000). Redundant."
+    },
+    {
+      "feature": "Init_Win_bytes_forward",
+      "category": "Numerical traffic features",
+      "group": "TCP Protocol State & Flag Signals",
+      "status": "Transform",
+      "rationale": "Contains -1 sentinel for non-TCP flows or missing SYN/SYN-ACK handshake. Should be transformed (e.g. separate binary indicator for TCP handshake or clip to 0)."
+    },
+    {
+      "feature": "Init_Win_bytes_backward",
+      "category": "Numerical traffic features",
+      "group": "TCP Protocol State & Flag Signals",
+      "status": "Transform",
+      "rationale": "Contains -1 sentinel for non-TCP flows or missing SYN/SYN-ACK handshake. Should be transformed (e.g. separate binary indicator for TCP handshake or clip to 0)."
+    },
+    {
+      "feature": "act_data_pkt_fwd",
+      "category": "Numerical traffic features",
+      "group": "Volume & Size Signals",
+      "status": "Keep",
+      "rationale": "Informative numerical traffic metric with healthy distribution and variance."
+    },
+    {
+      "feature": "min_seg_size_forward",
+      "category": "Numerical traffic features",
+      "group": "Volume & Size Signals",
+      "status": "Transform",
+      "rationale": "Contains negative values (35 rows, min=-5.37e+08) from CICFlowMeter 32-bit integer underflow bug. Needs clipping to 0."
+    },
+    {
+      "feature": "Active Mean",
+      "category": "Numerical traffic features",
+      "group": "Activity & Silence Signals",
+      "status": "Keep",
+      "rationale": "Activity/idle time features provide signal on flow periodicity."
+    },
+    {
+      "feature": "Active Std",
+      "category": "Numerical traffic features",
+      "group": "Activity & Silence Signals",
+      "status": "Keep",
+      "rationale": "Sparse for short flows, but critical multi-signal burst/silence indicator for persistent C2, DoS, and exfiltration flows."
+    },
+    {
+      "feature": "Active Max",
+      "category": "Numerical traffic features",
+      "group": "Activity & Silence Signals",
+      "status": "Keep",
+      "rationale": "Activity/idle time features provide signal on flow periodicity."
+    },
+    {
+      "feature": "Active Min",
+      "category": "Numerical traffic features",
+      "group": "Activity & Silence Signals",
+      "status": "Keep",
+      "rationale": "Activity/idle time features provide signal on flow periodicity."
+    },
+    {
+      "feature": "Idle Mean",
+      "category": "Numerical traffic features",
+      "group": "Activity & Silence Signals",
+      "status": "Keep",
+      "rationale": "Activity/idle time features provide signal on flow periodicity."
+    },
+    {
+      "feature": "Idle Std",
+      "category": "Numerical traffic features",
+      "group": "Activity & Silence Signals",
+      "status": "Keep",
+      "rationale": "Sparse for short flows, but critical multi-signal burst/silence indicator for persistent C2, DoS, and exfiltration flows."
+    },
+    {
+      "feature": "Idle Max",
+      "category": "Numerical traffic features",
+      "group": "Activity & Silence Signals",
+      "status": "Keep",
+      "rationale": "Activity/idle time features provide signal on flow periodicity."
+    },
+    {
+      "feature": "Idle Min",
+      "category": "Numerical traffic features",
+      "group": "Activity & Silence Signals",
+      "status": "Keep",
+      "rationale": "Activity/idle time features provide signal on flow periodicity."
+    },
+    {
+      "feature": "Label",
+      "category": "Label / Target",
+      "group": "Target Label",
+      "status": "Keep",
+      "rationale": "Ground truth target variable for model evaluation and validation."
+    }
+  ]
+}
